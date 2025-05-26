@@ -1,0 +1,15 @@
+{% if site.data.friends %}
+  <section id="access-friends">
+    <h2 class="panel-heading">
+      友情链接
+    </h2>
+    <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      {% for friend in site.data.friends %}
+        <li class="text-truncate lh-lg">
+          <a href="{{ friend.url }}" target="_blank">{{ friend.title }}({{friend.desc}})</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <!-- #access-friends -->
+{% endif %}

@@ -1,0 +1,34 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+// .friends-list {
+//   list-style: none;
+//   padding-left: 0;
+// }
+
+// .friends-list li {
+//   margin-bottom: 10px;
+//   font-size: 16px;
+// }
+
+// .friends-list a {
+//   color: #1e90ff;
+//   text-decoration: none;
+// }
+
+// .friends-list a:hover {
+//   text-decoration: underline;
+// }
+
+#access-friends a{
+  color: inherit;
+}
