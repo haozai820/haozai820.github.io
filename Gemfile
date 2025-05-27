@@ -16,3 +16,5 @@ gem "wdm", "~> 0.2.0", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "jekyll", "~> 4.3"
 gem "bundler", "~> 2.3"
 gem "webrick" # Jekyll 本地运行所需
+
+gem "jekyll-theme-chirpy"
