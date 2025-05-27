@@ -1,28 +1,25 @@
-name: Build and Deploy Jekyll
+name: Deploy Jekyll with GitHub Pages
 
 on:
   push:
-    branches: [main]
-
-permissions:
-  contents: write
+    branches:
+      - main
 
 jobs:
-  build:
+  github-pages:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout source
+        uses: actions/checkout@v4
 
-      - name: Set up Ruby
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1
-          bundler-cache: false
+          bundler-cache: false  # ⛔️关闭缓存避免冲突
 
       - name: Install dependencies
-        run: |
-          bundle install
+        run: bundle install
 
       - name: Build site
         run: bundle exec jekyll build
