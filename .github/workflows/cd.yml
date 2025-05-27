@@ -15,7 +15,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1
+          ruby-version: 3.2
           bundler-cache: false  # ⛔️关闭缓存避免冲突
 
       - name: Install dependencies
